@@ -104,7 +104,10 @@ body {
   background: var(--light-bg);
   flex-wrap: wrap;
 }
-
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 .hero-left {
   flex: 1;
   max-width: 600px;
