@@ -1,4 +1,3 @@
-
 /* ======================= */
 /*       GLOBAL BASE       */
 /* ======================= */
@@ -51,9 +50,12 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: bold;
-  color: var(--white);
+  color: #ff3c6f;
+  background: -webkit-linear-gradient(45deg, #ff3c6f, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -109,9 +111,14 @@ body {
 }
 
 .hero-left h1 {
-  font-size: 3rem;
-  color: var(--primary-blue);
+  font-size: 4rem;
+  color: #ff3c6f;
   margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(45deg, #ff3c6f, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-left p {
@@ -228,10 +235,10 @@ footer {
     padding: 2rem 1rem;
   }
 }
+
 /* ======================= */
 /*       ANIMATIONS        */
 /* ======================= */
-
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -242,6 +249,7 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* ======================= */
 /*     SEARCH SECTION      */
 /* ======================= */
@@ -289,4 +297,3 @@ footer {
 .search-btn:hover {
   background: var(--sea-green);
 }
-
