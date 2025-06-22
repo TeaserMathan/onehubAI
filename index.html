@@ -44,16 +44,37 @@
       text-align: center;
     }
 
-    main h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
-    main p {
-      font-size: 1.1rem;
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.6;
+    .column {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      transition: transform 0.2s;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+    }
+
+    .column h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .column p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
     }
 
     footer {
@@ -73,14 +94,33 @@
 <body>
   <header>
     <h1>OneHubAI</h1>
-    <p>Under-Construction.</p>
+    <p>Crafting Smart Tools for Smarter Tomorrows</p>
   </header>
 
   <main>
-    <h2>What We Do</h2>
-    <p>
-      OneHubAI builds intelligent automation systems that help modern industries work faster, think better, and grow smarter. We believe in tech that feels human.
-    </p>
+    <h2>Our Core Pillars</h2>
+    <div class="columns">
+      <div class="column">
+        <h3>AI Tools</h3>
+        <p>From text generators to predictive analytics, our AI suite simplifies work, saves time, and amplifies human creativity.</p>
+      </div>
+      <div class="column">
+        <h3>Job Insights</h3>
+        <p>We bridge talent with verified companies, offering deep insights into job markets and customized role-matching with AI.</p>
+      </div>
+      <div class="column">
+        <h3>CV Builder</h3>
+        <p>Smart, stylish, and tailored CV builders that highlight your strengths and help you stand out in any professional crowd.</p>
+      </div>
+      <div class="column">
+        <h3>Startup Guidance</h3>
+        <p>From ideation to execution, we help dreamers become doers with tools, mentorship, and real-world guidance.</p>
+      </div>
+      <div class="column">
+        <h3>Self-Growth Tools</h3>
+        <p>Time tracking, learning boosters, goal check-ins – we’ve got your personal growth journey backed by brainy tech.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
