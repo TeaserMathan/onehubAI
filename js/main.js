@@ -24,3 +24,17 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('show');
   });
 }
+// Add class when intersecting
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in-active');
+    }
+  });
+}, {
+  threshold: 0.1,
+});
+
+document.querySelectorAll('.fade-in').forEach((el) => {
+  observer.observe(el);
+});
