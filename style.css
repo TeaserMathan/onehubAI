@@ -1,136 +1,85 @@
 :root {
-  /* Premium Color Palette (adjusted to match your gradient) */
-  --primary: #0077B6;       /* Main blue */
-  --primary-light: #00B4D8; /* Gradient light blue */
-  --secondary: #00B894;     /* Your teal accent */
-  --accent: #00f5d4;        /* Bright teal */
-  --light: #f0f9ff;         /* Your light blue background */
-  --dark: #003049;          /* Your footer dark blue */
-  --text: #1a1a1a;          /* Your dark text */
-  --text-light: #444;       /* Your secondary text */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* Enhanced Premium Palette */
+  --gradient-start: #00C9FF;  /* Brighter gradient start */
+  --gradient-end: #0072FF;    /* Deeper gradient end */
+  --accent-teal: #00E3B6;     /* Vibrant teal */
+  --accent-hover: #00FFD1;    /* Glowing teal */
+  --card-border: #00A8FF;     /* Blue border */
+  --dark-blue: #002D4F;       /* Richer footer color */
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: var(--text);
+  background-color: #F8FCFF;  /* Lighter background */
+  color: #1A1A1A;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  line-height: 1.6;
 }
 
-/* Container for consistent width */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
+/* Animated Header */
 header {
-  background: linear-gradient(to right, var(--primary-light), var(--primary));
-  color: #ffffff;
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  padding: 4rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 24px 24px;  /* More pronounced curve */
+  box-shadow: 0 6px 18px rgba(0, 114, 255, 0.15);
+  animation: gradientShift 8s ease infinite alternate;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-main {
-  flex: 1;
-  padding: 2.5rem 1rem;
-  text-align: center;
-  background: var(--light);
-}
-
-main h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
+/* 3D Cards */
 .column {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  width: 300px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border-top: 4px solid var(--secondary);
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 168, 255, 0.1);
+  width: 320px;  /* Slightly wider */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border-top: 5px solid var(--accent-teal);
+  transform-style: preserve-3d;
 }
 
 .column:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 183, 255, 0.1);
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 0 12px 28px rgba(0, 168, 255, 0.2);
+  border-top-color: var(--accent-hover);
 }
 
-.column h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.column p {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
+/* Glowing Footer */
 footer {
-  background-color: var(--dark);
-  color: #e0f2f1;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  margin-top: auto;
-  border-radius: 16px 16px 0 0;
-}
-
-footer strong {
-  color: var(--accent);
-}
-
-/* Premium button style (add to your HTML where needed) */
-.btn {
-  display: inline-block;
-  background-color: var(--primary);
+  background: var(--dark-blue);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background-color: var(--primary-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+footer::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+  transform: translateX(-50%);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+main h2 {
+  animation: pulse 4s ease infinite;
 }
