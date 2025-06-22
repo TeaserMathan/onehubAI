@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OneHubAI – Powered by Teaservillage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,36 +13,44 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     header {
-      background: linear-gradient(to right, #0d1117, #1f2937);
-      color: #fff;
-      padding: 2.5rem 1rem;
+      background: linear-gradient(to right, #00B4D8, #0077B6);
+      color: #ffffff;
+      padding: 3rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     main {
       flex: 1;
       padding: 2.5rem 1rem;
       text-align: center;
+      background: #f0f9ff;
+    }
+
+    main h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #0a5275;
     }
 
     .columns {
@@ -53,33 +62,36 @@
     }
 
     .column {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       width: 300px;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid #00B894;
     }
 
     .column:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 183, 255, 0.1);
     }
 
     .column h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
-      color: #1f2937;
+      color: #005f73;
+      font-weight: 600;
     }
 
     .column p {
       font-size: 1rem;
       color: #444;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     footer {
-      background-color: #0d1117;
-      color: #ccc;
+      background-color: #003049;
+      color: #e0f2f1;
       padding: 1.5rem 1rem;
       text-align: center;
       font-size: 0.95rem;
@@ -87,7 +99,7 @@
     }
 
     footer strong {
-      color: #facc15;
+      color: #00f5d4;
     }
   </style>
 </head>
