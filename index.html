@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OneHubAI – Powered by Teaservillage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-  body {
-    background-image: url('image.png.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
-</style>
   <style>
     * {
       margin: 0;
@@ -25,11 +14,28 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
       color: #1a1a1a;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background-color: #ffffff;
+      background-image: url('image.png.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: -1;
     }
 
     header {
@@ -38,6 +44,7 @@
       padding: 3rem 1rem;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     header h1 {
@@ -55,7 +62,9 @@
       flex: 1;
       padding: 2.5rem 1rem;
       text-align: center;
-      background: #f0f9ff;
+      background: rgba(240, 249, 255, 0.8);
+      margin: 2rem;
+      border-radius: 16px;
     }
 
     main h2 {
@@ -112,6 +121,26 @@
     footer strong {
       color: #00f5d4;
     }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      main {
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+      }
+      
+      .column {
+        width: 100%;
+        max-width: 350px;
+      }
+      
+      body {
+        background-attachment: scroll;
+      }
+    }
   </style>
 </head>
 <body>
@@ -141,7 +170,7 @@
       </div>
       <div class="column">
         <h3>Self-Growth Tools</h3>
-        <p>Time tracking, learning boosters, goal check-ins – we’ve got your personal growth journey backed by brainy tech.</p>
+        <p>Time tracking, learning boosters, goal check-ins – we've got your personal growth journey backed by brainy tech.</p>
       </div>
     </div>
   </main>
@@ -151,7 +180,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
