@@ -141,6 +141,54 @@ body {
 }
 
 /* ======================= */
+/*       SEARCH SECTION    */
+/* ======================= */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: var(--light-bg);
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-family: var(--font-main);
+}
+
+.search-btn {
+  padding: 0 2rem;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: var(--sea-green);
+}
+
+/* ======================= */
 /*        SECTION          */
 /* ======================= */
 .section {
@@ -160,7 +208,8 @@ body {
   text-align: center;
 }
 
-.section p, .section ul {
+.section p,
+.section ul {
   max-width: 800px;
   margin: auto;
   font-size: 1rem;
@@ -226,7 +275,8 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  .hero-left, .hero-right {
+  .hero-left,
+  .hero-right {
     flex: unset;
     max-width: 100%;
   }
@@ -248,52 +298,4 @@ footer {
 .fade-in.fade-in-active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ======================= */
-/*     SEARCH SECTION      */
-/* ======================= */
-.search-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 2rem;
-  background: var(--light-bg);
-}
-
-.search-form {
-  display: flex;
-  width: 100%;
-  max-width: 700px;
-  background: var(--white);
-  box-shadow: var(--shadow);
-  border-radius: 50px;
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.search-input {
-  flex: 1;
-  padding: 1rem 1.5rem;
-  border: none;
-  font-size: 1.1rem;
-  border-radius: 50px 0 0 50px;
-  outline: none;
-  font-family: var(--font-main);
-}
-
-.search-btn {
-  padding: 0 2rem;
-  background: var(--primary-blue);
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0 50px 50px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.search-btn:hover {
-  background: var(--sea-green);
 }
