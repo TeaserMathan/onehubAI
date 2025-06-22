@@ -1,24 +1,94 @@
+:root {
+  /* Premium Color Palette */
+  --primary: #2563eb;    /* Vibrant blue */
+  --primary-dark: #1e40af; /* Deep blue */
+  --secondary: #7c3aed;  /* Royal purple */
+  --accent: #059669;     /* Emerald green */
+  --light: #f8fafc;      /* Snow white */
+  --dark: #0f172a;       /* Midnight blue */
+  --gray: #64748b;       /* Cool gray */
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #f3f4f6;
-  color: #222;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Rounded corners container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 header {
-  background-color: #0f172a;
+  background-color: var(--dark);
   color: white;
   padding: 2rem;
   text-align: center;
+  border-radius: 0 0 16px 16px; /* Rounded bottom corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
 }
 
 main {
-  padding: 2rem;
+  padding: 2rem 0;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
 }
 
 footer {
-  background-color: #0f172a;
+  background-color: var(--dark);
   color: white;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
+  border-radius: 16px 16px 0 0; /* Rounded top corners */
+  margin-top: 3rem;
+}
+
+/* Premium buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* GitHub corner ribbon (optional) */
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
