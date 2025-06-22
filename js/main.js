@@ -14,7 +14,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.section, .service-card').forEach((el) => {
   observer.observe(el);
 });
-
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    el.classList.add('fade-in-active');
+  });
+});
 // ========== Mobile Menu Toggle (if you want later) ==========
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
